@@ -8,13 +8,16 @@ class FormController {
 //        println("parameters recieved")
 //
 //   redirect(controller:"form",action:"thankyou",params:[name:"you"])
-   println params.firstName
-    println params.lastName
-        println params.email
-        //println params.password
-        println params.DOB
-        return[firstName:params.firstName,lastName:params.lastName,Email:params.email,currentDate:new Date(),age:100,DOB:params.DOB]
+         User u=new User(fn:params.firstName,ln:params.lastName,em:params.email,dob:params.DOB);
+        u.myTask()
 
+//   println params.firstName
+//    println params.lastName
+//        println params.email
+//        println params.password
+//        println params.DOB
+        //return[firstName:params.firstName,lastName:params.lastName,Email:params.email,currentDate:new Date(),age:100,DOB:params.DOB]
+        return [u1: u]
     }
     def thankyou()
     {
