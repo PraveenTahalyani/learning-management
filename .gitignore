@@ -10,3 +10,4 @@ learning-management-grailsPlugins.iml
 learning-management.iml
 target/
 wrapper/
+test/
